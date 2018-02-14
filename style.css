@@ -36,7 +36,7 @@ body{
 }
 
 #blurry{
-    background: linear-gradient(to right, green , #32CD32);
+    background: linear-gradient(to right, rgb(65, 105, 225), rgb(50, 205, 50));
     height:100vh;
     position:relative;
     left: 0;
@@ -87,4 +87,12 @@ body{
 
 #blurry {
     text-align: center;
+}
+
+.blur-all {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
 }

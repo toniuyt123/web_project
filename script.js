@@ -24,32 +24,30 @@ $(document).ready(function(){
     });
 
     $(".landing > h1, .landing > p, .landing > div").hide();
-    $(".landing > h1").fadeIn(1500, function() {
+    $(".landing > h1").fadeIn(2000, function() {
         $(".landing > p, .landing > div").fadeIn(1500);
     });
 
     $("#leftb, #rightb").mouseenter(function() {
         $(this).animate({
-            fontSize: "2.0em"
-        });
+            fontSize: "2.0em" });
+        $(this).css('cursor','pointer');
     });
 
     $("#leftb, #rightb").mouseleave(function() {
         $(this).animate({
-            fontSize: "1.7em"
-        });
+            fontSize: "1.7em" });
     });
 
-    $("#left").mouseenter(function() {
-        $("#left h1").animate({
-            fontSize: "70px",
-        }, 'slow');
+    $("#left h1, #right h1").mouseenter(function() {
+        $(this).animate({
+            fontSize: "70px" });
+        $(this).css('cursor','pointer');
     });
 
-    $("#left").mouseleave(function() {
-        $("#left h1").animate({
-            fontSize: "60px"
-        }, 'slow');
+    $("#left h1, #right h1").mouseleave(function() {
+        $(this).animate({
+            fontSize: "60px" });
     });
 });
 
