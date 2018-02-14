@@ -14,16 +14,19 @@ function changeSize(begin, end, step) {
     }
 }*/
 $(document).ready(function(){
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'click.mp3');
+
     $("#leftb").click(function() {
         $('html,body').animate({
-            scrollTop: $("#blurry").offset().top},
-            'slow');
+            scrollTop: $("#blurry").offset().top},'slow');
+        audioElement.play();
     });
 
-    $(".landing > h1, .landing > p, .landing > div").hide();
+    /*$(".landing > h1, .landing > p, .landing > div").hide();
     $(".landing > h1").fadeIn(1500, function() {
         $(".landing > p, .landing > div").fadeIn(1500);
-    });
+    });*/
     document.getElementById("particles-js").addEventListener("onload", changeColor());
 
 });
