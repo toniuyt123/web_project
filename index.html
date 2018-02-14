@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div id="particles-js">
+        <div class="landing">
+            <h1>Are you ready to pick a name?</h1>
+            <p>Consider carefully. Your life will never be the same!</p>
+            <div>
+                <a class="button" id="leftb">Ready to ascend</a>
+                <a class="button" id="rightb">Too scared yet</a>
+            </div>
+        </div>
+    </div>
+   <div id="blurry">
+            <div id="contents">
+                <a href="index.html" class="button">Ready to ascend</a>
+                <a href="index.html" class="button">Too scared yet</a>
+            </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        particlesJS.load('particles-js', 'particles.json',
+        function(){
+            console.log('particles.json loaded...')
+        })
+    </script>
+</body>
+</html>
