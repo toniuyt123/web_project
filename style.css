@@ -58,6 +58,7 @@ body{
 #left h1, #right h1{
     font-size: 60px;
     color: white;
+    padding: 10px;
 }
 
 #left, #right {
@@ -95,4 +96,20 @@ body{
     -o-filter: blur(10px);
     -ms-filter: blur(10px);
     filter: blur(10px);
+}
+
+#info{
+    position:absolute;
+    float:right;
+    color:rgb(65, 105, 225);
+    margin:10px;
+    font-size:1.5em;
+    background-color: rgb(24, 24, 24, 0.6);
+    border-radius: 50%;
+    /*overflow: scroll;*/
+}
+
+#info:hover{
+    background-color: rgb(24, 24, 24, 0.9);
+    cursor: pointer;
 }

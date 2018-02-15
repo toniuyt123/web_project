@@ -49,6 +49,64 @@ $(document).ready(function(){
         $(this).animate({
             fontSize: "60px" });
     });
+
+    $("#info").click(function() {
+        $("#info").css({                   //animating borderRadius is dumb and this was
+            borderTopLeftRadius: "50%",     // the only solution to work on all browsers
+            borderTopRightRadius: "50%",     // i could find
+            borderBottomLeftRadius: "50%", 
+            borderBottomRightRadius: "50%",
+            WebkitBorderTopLeftRadius:"50%", 
+            WebkitBorderTopRightRadius: "50%", 
+            WebkitBorderBottomLeftRadius: "50%", 
+            WebkitBorderBottomRightRadius: "50%", 
+            MozBorderRadius: "50%" 
+        }).animate({
+            borderTopLeftRadius: "5px", 
+            borderTopRightRadius: "5px", 
+            borderBottomLeftRadius: "5px", 
+            borderBottomRightRadius: "5px",
+            WebkitBorderTopLeftRadius: "5px", 
+            WebkitBorderTopRightRadius: "5px", 
+            WebkitBorderBottomLeftRadius: "5px", 
+            WebkitBorderBottomRightRadius: "5px", 
+            MozBorderRadius: "5px",
+            width: "30%",
+            height: "20%",
+            fontSize: "1.3em"
+        }, function() {
+            $("#info").html("Are so uncreative that you can't think of a name for you team/project/nickname or whatever. Well this site is just for you. With it you can generate a nice name with our games of use some super cool real life methods for picking a random name");
+        });
+    });
+
+    $("#info").mouseleave(function() {
+        $("#info").css({ 
+            borderTopLeftRadius: "5px", 
+            borderTopRightRadius: "5px", 
+            borderBottomLeftRadius: "5px", 
+            borderBottomRightRadius: "5px",
+            WebkitBorderTopLeftRadius: "5px", 
+            WebkitBorderTopRightRadius: "5px", 
+            WebkitBorderBottomLeftRadius: "5px", 
+            WebkitBorderBottomRightRadius: "5px",
+            MozBorderRadius: "5px" 
+        }).animate({
+            borderTopLeftRadius: "50%", 
+            borderTopRightRadius: "50%", 
+            borderBottomLeftRadius: "50%", 
+            borderBottomRightRadius: "50%",
+            WebkitBorderTopLeftRadius:"50%", 
+            WebkitBorderTopRightRadius: "50%", 
+            WebkitBorderBottomLeftRadius: "50%", 
+            WebkitBorderBottomRightRadius: "50%",  
+            MozBorderRadius: "50%",
+            width: "20px",
+            height: "20px" ,
+            fontSize: "1.5em"
+        }, function() {
+            $("#info").html("?");
+        });
+    });
 });
 
 function changeColor() {
