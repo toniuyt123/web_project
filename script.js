@@ -109,7 +109,7 @@ $(document).ready(function(){
     });
 });
 
-function changeColor() {
+function changeColor() { //was supposed to animate this that's why this wierd function exists. Will do it in the future
     var elem = document.getElementById("particles-js");
     var red1 = 65, red2 = 50;
     var green1 = 105, green2 = 205;
