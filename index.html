@@ -7,16 +7,17 @@
     <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="methods.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
-     <audio autoplay>
-        <source src="soothing.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio> 
+    <audio autoplay>
+        <source src="soothing.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
     <div id="particles-js">
-        <p id="info">?</p>  <!--Looks awful but i wanted to add an info button. Will improve it a lot-->
+        <p id="info">?</p>
+        <!--Looks awful but i wanted to add an info button. Will improve it a lot-->
         <div class="landing">
             <h1>Are you ready to pick a name?</h1>
             <p>Consider carefully. Your life will never be the same!</p>
@@ -27,15 +28,17 @@
         </div>
     </div>
     <div id="blurry" style="width: 100%;">
-        <div class="method" id="left">
+        <div class="option" id="left">
             <h1>Real life methods</h1>
         </div>
         <div class="devider"></div>
-        <div class="method" id="right">
-             <h1>Games on the site</h1>
+        <div class="option" id="right">
+            <h1>Games on the site</h1>
+        </div>
+        <div id="irlmethods">
         </div>
     </div>
-    <div style="clear:both"></div>
+    <div id="clear" style="clear:both"></div>
 </body>
 
 </html>

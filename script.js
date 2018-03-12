@@ -4,6 +4,11 @@ $(document).ready(function(){
             console.log('particles.json loaded...')
         })
 
+    particlesJS.load('blurry', 'particles.json',
+        function () {
+            console.log('particles.json loaded...')
+        })
+
     var clickSound = document.createElement('audio');
     clickSound.setAttribute('src', 'click.mp3');
     clickSound.volume = 0.4;
@@ -48,6 +53,14 @@ $(document).ready(function(){
     $("#left h1, #right h1").mouseleave(function() {
         $(this).animate({
             fontSize: "60px" });
+    });
+
+    $("#left").click(function() {
+        $(".option, .devider, #clear").fadeOut(400, function() { 
+            $(this).remove(); 
+        });
+
+        loadMethods();
     });
 
     $("#info").click(function() {
@@ -109,7 +122,7 @@ $(document).ready(function(){
     });
 });
 
-function changeColor() { //was supposed to animate this that's why this wierd function exists. Will do it in the future
+function changeColor() { //was supposed to animate this that's why this wierd function exists. Will probably do it in the future
     var elem = document.getElementById("particles-js");
     var red1 = 65, red2 = 50;
     var green1 = 105, green2 = 205;
