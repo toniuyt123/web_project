@@ -56,7 +56,7 @@ $(document).ready(function(){
     });
 
     $("#left").click(function() {
-        $(".option, .devider, #clear").fadeOut(400, function() { 
+        $(".option, .vertical-devider, #clear").fadeOut(400, function() { 
             $(this).remove(); 
         });
 

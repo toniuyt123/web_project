@@ -78,13 +78,21 @@ body{
     float: right;
 }
 
-.devider{
+.vertical-devider{
     position:absolute;
     left:50%;
     top:10%;
     bottom:5%;
     /*border-left:1px solid white;*/
     box-shadow: 0px 0px 5px 3px white;
+}
+
+.horizontal-devider{
+    position:absolute;
+    height: 0;
+    /*border-left:1px solid white;*/
+    box-shadow: 0px 0px 5px 3px white;
+    width: 100%;
 }
 
 #blurry {
@@ -116,4 +124,16 @@ body{
 }
 
 #irlmethods {
+    position: relative;
+    height: 0;
+    width: 50%;
+    margin:auto;
+}
+
+.method {
+    color: white;
+    font-size: 2em;
+    text-align: left;
+    padding-bottom: 10px;
+    padding-top: 20px;
 }
