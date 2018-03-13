@@ -132,8 +132,24 @@ body{
 
 .method {
     color: white;
-    font-size: 2em;
+    font-size: 3em;
+    width:70%; /* 70% of the parent*/
+    margin:10px auto;
+    text-align: center;
+    transform: translate(0%,-70%);
+}
+
+.methodimg, .method {
+    display:inline-block;
+    margin-top: 20px;
+}
+
+.methodimg {
+    width: 150px;
+    height: 150px;
+}
+
+.method-container {
     text-align: left;
-    padding-bottom: 10px;
-    padding-top: 20px;
+    width:100%;
 }
