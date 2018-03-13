@@ -15,8 +15,12 @@ $(document).ready(function(){
 
     document.getElementById("particles-js").addEventListener("onload", changeColor());
 
-    $(".button").click(function() {
+    $(".button, .option, .method-container").click(function() {
         clickSound.play();
+    });
+
+    $("#leftb, #rightb, #left h1, #right h1, .method-container").mouseenter(function() {
+        $(this).css('cursor','pointer');
     });
 
     $("#leftb").click(function() {
@@ -47,7 +51,6 @@ $(document).ready(function(){
     $("#left h1, #right h1").mouseenter(function() {
         $(this).animate({
             fontSize: "70px" });
-        $(this).css('cursor','pointer');
     });
 
     $("#left h1, #right h1").mouseleave(function() {

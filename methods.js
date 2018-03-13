@@ -1,9 +1,15 @@
 var arr = [{
     img: 'book.png',
-    text: 'Using books around you!'
+    text: 'Using books around you!',
+    href: 'bookmethod.html'
 }, {
     img: 'book.png',
-    text: 'wowza'
+    text: 'wowza',
+    href: '#'
+}, {
+    img: '#',
+    text: 'soon...',
+    href: '#'
 }];
 
 
@@ -15,7 +21,9 @@ function loadMethods() {
         $('<div />', {
             'class': 'method-container',
             'id': met
-        }).appendTo('#irlmethods')
+        }).appendTo('#irlmethods').click(function() {
+            window.location.replace(value.href);
+        });
 
         $('<img />', {
             'class': 'methodimg',
