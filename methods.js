@@ -22,7 +22,7 @@ function loadMethods() {
             'class': 'method-container',
             'id': met
         }).appendTo('#irlmethods').click(function() {
-            window.location.replace(value.href);
+            window.location = value.href;
         });
 
         $('<img />', {
