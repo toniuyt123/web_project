@@ -18,7 +18,7 @@ $(document).ready(function(){
         clickSound.play();
     });
 
-    $("#leftb, #rightb, #left h1, #right h1, #irlmethods").mouseenter(function() {
+    $("#leftb, #rightb, #left h1, #right h1, #irlmethods, .circle").mouseenter(function() {
         $(this).css('cursor','pointer');
     });
 
@@ -121,5 +121,9 @@ $(document).ready(function(){
         }, function() {
             $("#info").html("?");
         });
+    });
+
+    $(".circle").click(function() {
+        window.location = "index.html";
     });
 });
