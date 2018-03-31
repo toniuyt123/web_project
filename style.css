@@ -1,8 +1,9 @@
-html, body {margin: 0; height: 100%; overflow: hidden}
+html, body {margin: 0; /*height: 100%;*/ overflow: hidden}
 body{
     margin: 0;
     font-family: 'Baloo';
     font-size: 16px;
+    background: linear-gradient(to right, rgb(65, 105, 225), rgb(50, 205, 50));
 }
 
 .landing{
@@ -172,4 +173,25 @@ body{
 .method-container {
     text-align: left;
     width:100%;
+}
+
+.method-content{
+    max-width: 960px;
+    margin: 0 auto;
+    background: black;
+    font-size: 24px;
+    padding: 25px;
+    color: white;
+}
+
+.method-content h1{
+    text-align: center;
+    margin-top: 5px;
+}
+
+#par1 {
+    background: url("./images/bookshelf.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
 }

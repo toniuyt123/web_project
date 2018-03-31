@@ -10,16 +10,15 @@ $(document).ready(function(){
         })
 
     var clickSound = document.createElement('audio');
-    clickSound.setAttribute('src', 'click.mp3');
+    clickSound.setAttribute('src', './audio/click.mp3');
     clickSound.volume = 0.4;
 
-    document.getElementById("particles-js").addEventListener("onload", changeColor());
 
     $(".button, .option, .method-container").click(function() {
         clickSound.play();
     });
 
-    $("#leftb, #rightb, #left h1, #right h1, .method-container").mouseenter(function() {
+    $("#leftb, #rightb, #left h1, #right h1, #irlmethods").mouseenter(function() {
         $(this).css('cursor','pointer');
     });
 
@@ -124,11 +123,3 @@ $(document).ready(function(){
         });
     });
 });
-
-function changeColor() { //was supposed to animate this that's why this wierd function exists. Will probably do it in the future
-    var elem = document.getElementById("particles-js");
-    var red1 = 65, red2 = 50;
-    var green1 = 105, green2 = 205;
-    var blue1 = 225, blue2 = 50;
-    elem.style.background = "linear-gradient(to right, rgb(" + red1 + ", " + green1 + ", " + blue1 + "), rgb(" + red2 + ", " + green2 + ", " + blue2 + "))";
-}

@@ -1,9 +1,9 @@
 var arr = [{
-    img: 'book.png',
+    img: './images/book.png',
     text: 'Using books around you!',
     href: 'bookmethod.html'
 }, {
-    img: 'book.png',
+    img: './images/book.png',
     text: 'wowza',
     href: '#'
 }, {
