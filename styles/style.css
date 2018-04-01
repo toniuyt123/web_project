@@ -145,7 +145,7 @@ body{
     cursor: pointer;
 }
 
-#irlmethods {
+#methods {
     position: relative;
     height: 0;
     width: 50%;
@@ -177,11 +177,11 @@ body{
 }
 
 .method-content{
-    max-width: 960px;
+    max-width: 60%;
     margin: 0 auto;
-    background: black;
+    background: rgb(0, 0, 0, 0.8);
     font-size: 24px;
-    padding: 25px;
+    padding: 30px;
     color: white;
 }
 
@@ -191,21 +191,21 @@ body{
 }
 
 #par1 {
-    background: url("./images/bookshelf.jpg") no-repeat center;
+    background: url("../images/bookshelf.jpg") no-repeat center;
     background-size: 90% auto;
     background-attachment: fixed;
     height: 500px;
 }
 
 #par2 {
-    background: url("./images/openedbook.jpeg") no-repeat center;
+    background: url("../images/openedbook.jpeg") no-repeat center;
     background-size: 80% auto;
     background-attachment: fixed;
     height: 500px;
 }
 
 #par3 {
-    background: url("./images/guywithbook.jpg") no-repeat center;
+    background: url("../images/guywithbook.jpg") no-repeat center;
     background-size: 70% auto;
     background-attachment: fixed;
     height: 500px;

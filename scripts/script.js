@@ -62,7 +62,15 @@ $(document).ready(function(){
             $(this).remove(); 
         });
 
-        loadMethods();
+        loadMethods(1);
+    });
+
+    $("#right").click(function() {
+        $(".option, .vertical-devider, #clear").fadeOut(400, function() { 
+            $(this).remove(); 
+        });
+
+        loadMethods(2);
     });
 
     $("#info").click(function() {

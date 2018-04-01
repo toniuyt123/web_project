@@ -1,4 +1,4 @@
-var arr = [{
+var irlArr = [{
     img: './images/book.png',
     text: 'Using books around you!',
     href: 'bookmethod.html'
@@ -12,8 +12,28 @@ var arr = [{
     href: '#'
 }];
 
+var gameArr = [{
+    img: './images/book.png',
+    text: 'Uaaasing books around you!',
+    href: 'bookmethod.html'
+}, {
+    img: './images/book.png',
+    text: 'wowza',
+    href: '#'
+}, {
+    img: '#',
+    text: 'soon...',
+    href: '#'
+}];
 
-function loadMethods() {
+
+function loadMethods(selection) {
+    var arr;
+    if(selection == 1) {
+        arr = irlArr
+    } else if(selection == 2) {
+        arr = gameArr
+    }
     var i = 0;
     $.each(arr, function(index, value) {
         var met = 'met' + i;
@@ -21,7 +41,7 @@ function loadMethods() {
         $('<div />', {
             'class': 'method-container',
             'id': met
-        }).appendTo('#irlmethods').click(function() {
+        }).appendTo('#methods').click(function() {
             window.location = value.href;
         });
 
@@ -38,7 +58,7 @@ function loadMethods() {
         $('<div />', {
             'class': 'horizontal-devider',
             'id': dev
-        }).hide().appendTo('#irlmethods').fadeIn('slow');
+        }).hide().appendTo('#methods').fadeIn('slow');
 
         i++;
     });
