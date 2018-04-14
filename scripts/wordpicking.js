@@ -3,17 +3,20 @@ $(document).ready(function(){
 });
 
 var wordCount = 0;
+var clickSound = document.createElement('audio');
+clickSound.setAttribute('src', './audio/word-click.mp3');
 
 function loadWords() {
     var randWords = getRandom(words, 10);
     var wordIndex = 0;
-    console.log(randWords);
+    //console.log(randWords);
 
     var table = $('<table>').addClass('wordgame-table');
     for(var i = 0;i < randWords.length / 2;i++) {
         var row =  $('<tr>').addClass('gametable-row').attr('id', 'gametable-row' + i);
         for(var j = 0;j < 2;j++) {
             var col = $('<td>').addClass('gametable-col').text(randWords[wordIndex++]).click(function() {
+                clickSound.play();
                 $('#word-counter').text(++wordCount);
                 table.remove();
                 loadWords();
