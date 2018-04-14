@@ -1,36 +1,46 @@
 $(document).ready(function(){
-    loadWords();
+    createTable();
 });
 
 var wordCount = 0;
 var clickSound = document.createElement('audio');
 clickSound.setAttribute('src', './audio/word-click.mp3');
 
-function loadWords() {
-    var randWords = getRandom(words, 10);
-    var wordIndex = 0;
-    //console.log(randWords);
-
-    var table = $('<table>').addClass('wordgame-table');
-    for(var i = 0;i < randWords.length / 2;i++) {
+function createTable() {
+    var colId = 0;
+    var table = $('<table>').attr('id','wordgame-table');
+    for(var i = 0;i < 5; i++) {
         var row =  $('<tr>').addClass('gametable-row').attr('id', 'gametable-row' + i);
         for(var j = 0;j < 2;j++) {
-            var col = $('<td>').addClass('gametable-col').text(randWords[wordIndex++]).click(function() {
+            var col = $('<td>').addClass('gametable-col').attr('id', 'gametable-col' + colId++).click(function() {
                 clickSound.play();
                 $('#word-counter').text(++wordCount);
-                table.remove();
+                constructName($(this));
                 loadWords();
             });
             row.append(col);
             $('<div />', {
                 'class': 'horizontal-devider-small'
-            }).hide().appendTo(col).fadeIn('slow');
+            }).appendTo(col);
         }
         table.append(row);
     }
     table.appendTo('#table-here')
+    loadWords();
+}
 
-    table.hide().fadeIn('slow');
+function loadWords() {
+    var randWords = getRandom(words, 10);
+
+    for(var i = 0;i < randWords.length;i++) {
+        $('#gametable-col' + i).text(randWords[i]);
+    }
+}
+
+function constructName(choice) {
+    word = choice.text();
+    
+    //todo
 }
 
 function getRandom(arr, n) {
