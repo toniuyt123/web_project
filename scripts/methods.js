@@ -14,11 +14,11 @@ var irlArr = [{
 
 var gameArr = [{
     img: './images/book.png',
-    text: 'Uaaasing books around you!',
-    href: 'bookmethod.html'
+    text: 'Picking words!',
+    href: 'wordgame.html'
 }, {
     img: './images/book.png',
-    text: 'wowza',
+    text: 'another one',
     href: '#'
 }, {
     img: '#',

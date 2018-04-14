@@ -18,7 +18,7 @@ $(document).ready(function(){
         clickSound.play();
     });
 
-    $("#leftb, #rightb, #left h1, #right h1, #irlmethods, .circle").mouseenter(function() {
+    $("#leftb, #rightb, #left h1, #right h1, #irlmethods, .circle, #methods").mouseenter(function() {
         $(this).css('cursor','pointer');
     });
 

@@ -56,7 +56,6 @@ body{
     /*background: linear-gradient(to right, #4169E1 , #32CD32);*/
     position: absolute;
     width: 100%;
-    height:100%;
     z-index: -1;
 }
 
@@ -183,6 +182,7 @@ body{
     font-size: 24px;
     padding: 30px;
     color: white;
+    min-height: 100vh;
 }
 
 .method-content h1{
