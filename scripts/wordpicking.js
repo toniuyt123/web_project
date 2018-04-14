@@ -2,41 +2,32 @@ $(document).ready(function(){
     loadWords();
 });
 
+var wordCount = 0;
+
 function loadWords() {
     var randWords = getRandom(words, 10);
     var wordIndex = 0;
     console.log(randWords);
 
-    var table = $('#wordgame-table');
+    var table = $('<table>').addClass('wordgame-table');
     for(var i = 0;i < randWords.length / 2;i++) {
         var row =  $('<tr>').addClass('gametable-row').attr('id', 'gametable-row' + i);
         for(var j = 0;j < 2;j++) {
-            var col = $('<td>').addClass('gametable-col').text(randWords[++wordIndex]);
+            var col = $('<td>').addClass('gametable-col').text(randWords[wordIndex++]).click(function() {
+                $('#word-counter').text(++wordCount);
+                table.remove();
+                loadWords();
+            });
             row.append(col);
+            $('<div />', {
+                'class': 'horizontal-devider-small'
+            }).hide().appendTo(col).fadeIn('slow');
         }
         table.append(row);
     }
+    table.appendTo('#table-here')
 
-    /*$.each(randWords, function() {
-        var rowId = 'gametable-row' + rowi;
-
-        $('<tr>', {
-            'class': 'gametable-row',
-            'id': rowId
-        }).appendTo('#wordgame-table');
-
-        $('<td>', {
-            'class': 'gametable-col',
-            'text': randWords[++coli],
-        }).hide().appendTo(rowId).fadeIn('slow');
-
-        $('<td>', {
-            'class': 'gametable-col',
-            'text': randWords[++coli],
-        }).hide().appendTo(rowId).fadeIn('slow');
-
-        rowi++;
-    });*/
+    table.hide().fadeIn('slow');
 }
 
 function getRandom(arr, n) {
