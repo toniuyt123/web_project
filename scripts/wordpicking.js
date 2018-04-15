@@ -52,12 +52,53 @@ function constructName(choice) {
     for(var i = 0;i < letters;i++) {
         constructed += word[index + i];
     }
-
-    console.log(constructed);
 }
 
 function showFinalName() {
-    //todo
+    console.log(constructed);
+    constructed = constructed.toLowerCase();
+    removal = getRandomNum(10, constructed.length / 1.5);
+
+    //shortening
+    for(var i = 0;i < removal;i++) {
+        rmIndex = getRandomNum(0, constructed.length);
+
+        constructed = splitString(constructed, rmIndex);
+    }
+    console.log(constructed);
+
+    //remove much volews
+    var chanceToRemove = 0;
+    var lastLetter = 2;
+    for(var i = 0;i < constructed.length;i++) {
+        if(consonants.includes(constructed[i])) {
+            if(lastLetter == 1) {
+                chanceToRemove = 0;
+            } else {
+                chanceToRemove += 33;
+            }
+            lastLetter = 0;
+        } else {
+            if(lastLetter == 0) {
+                chanceToRemove = 0;
+            } else {
+                chanceToRemove += 33;
+            }
+            lastLetter = 1;
+        }
+
+        removeRoll = getRandomNum(1, 100);
+        if(chanceToRemove > removeRoll) {
+            constructed = splitString(constructed, i);
+            i--;
+        }
+    }
+
+    console.log("similar letters = "+constructed);
+}
+
+function splitString(word, index) {
+    return word.substring(0, index) + word.substring(index + 1);
 }
 
 function getRandomNum(min, max) {
@@ -98,3 +139,5 @@ var words =
  'Lipstick', 'Kawaii', 'Kiss', 'Marshmallow', 'Melody', 'Milk', 'Mouse', 'Nibble', 'Nightgown', 'Papa',
  'Parfait', 'Playground', 'Poof', 'Pout', 'Puppy', 'Swimsuit', 'Shopping', 'Skipping', 'Socks', 'Spinning',
  'Sticky', 'Strawberry', 'Sugar', 'Summer', 'Twirl', 'Waterfall', 'Valentine', 'Vanilla']
+
+ var consonants = ['a', 'e', 'i', 'o', 'u', 'y'];
