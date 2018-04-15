@@ -55,7 +55,7 @@ function constructName(choice) {
 }
 
 function showFinalName() {
-    console.log(constructed);
+    console.log("at first = " + constructed);
     constructed = constructed.toLowerCase();
     removal = getRandomNum(10, constructed.length / 1.5);
 
@@ -65,7 +65,7 @@ function showFinalName() {
 
         constructed = splitString(constructed, rmIndex);
     }
-    console.log(constructed);
+    console.log("shortening = " + constructed);
 
     //remove much volews
     var chanceToRemove = 0;
@@ -93,8 +93,15 @@ function showFinalName() {
             i--;
         }
     }
+    constructed = constructed.charAt(0).toUpperCase() + constructed.slice(1);
+    console.log("more readable = " + constructed);
 
-    console.log("similar letters = "+constructed);
+    $("<h1>").text("You got:" + constructed).addClass("game-result-text").appendTo(".method-content");
+    $("<div>").text("< Try Again").addClass("tryagaing").appendTo(".method-content").click(function() {
+        window.location.reload();
+    }).mouseenter(function() {
+        $(this).css('cursor','pointer');
+    });;
 }
 
 function splitString(word, index) {
