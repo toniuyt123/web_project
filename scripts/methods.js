@@ -7,7 +7,7 @@ var irlArr = [{
     text: 'wowza',
     href: '#'
 }, {
-    img: '#',
+    img: './images/book.png',
     text: 'soon...',
     href: '#'
 }];

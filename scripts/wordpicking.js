@@ -100,8 +100,9 @@ function showFinalName() {
     constructed = constructed.charAt(0).toUpperCase() + constructed.slice(1);
     console.log("more readable = " + constructed);
 
-    $("<h1>").text("You got:" + constructed).addClass("game-result-text").appendTo(".method-content");
-    $("<div>").text("< Try Again").addClass("tryagaing").appendTo(".method-content").click(function() {
+    $("<h1>").text("You got:").addClass("game-result-text").appendTo(".method-content")
+        .append($("<br>")).append($("<span>").text(constructed));
+    $("<div>").text("< Try Again").addClass("right-text").appendTo(".method-content").click(function() {
         window.location.reload();
     }).mouseenter(function() {
         $(this).css('cursor','pointer');
