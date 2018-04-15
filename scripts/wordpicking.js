@@ -3,6 +3,7 @@ $(document).ready(function(){
 });
 
 var wordCount = 0;
+var constructed = '';
 var clickSound = document.createElement('audio');
 clickSound.setAttribute('src', './audio/word-click.mp3');
 
@@ -16,6 +17,11 @@ function createTable() {
                 clickSound.play();
                 $('#word-counter').text(++wordCount);
                 constructName($(this));
+                if(wordCount == 21) {
+                    $('.method-content p, #table-here').remove();
+                    showFinalName();
+                    return;
+                }
                 loadWords();
             });
             row.append(col);
@@ -30,7 +36,7 @@ function createTable() {
 }
 
 function loadWords() {
-    var randWords = getRandom(words, 10);
+    var randWords = getRandomSet(words, 10);
 
     for(var i = 0;i < randWords.length;i++) {
         $('#gametable-col' + i).text(randWords[i]);
@@ -40,10 +46,25 @@ function loadWords() {
 function constructName(choice) {
     word = choice.text();
     
+    letters = getRandomNum(1, 3);
+    index = getRandomNum(0, word.length - letters);
+
+    for(var i = 0;i < letters;i++) {
+        constructed += word[index + i];
+    }
+
+    console.log(constructed);
+}
+
+function showFinalName() {
     //todo
 }
 
-function getRandom(arr, n) {
+function getRandomNum(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function getRandomSet(arr, n) {
     var result = new Array(n),
         len = arr.length,
         taken = new Array(len);
