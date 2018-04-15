@@ -21,7 +21,7 @@ var gameArr = [{
     text: 'another one',
     href: '#'
 }, {
-    img: '#',
+    img: './images/book.png',
     text: 'soon...',
     href: '#'
 }];

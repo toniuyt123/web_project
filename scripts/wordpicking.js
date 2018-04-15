@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    var music = document.createElement('audio');
+    music.setAttribute('src', './audio/[DDLC]wordgamemusic.mp3');
+    music.autoplay = true;
+    music.volume = 0.2;
     createTable();
 });
 
