@@ -10,9 +10,9 @@ body{
     color: #f9f3f4;
     position: absolute;
     text-align: center;
-    top: 40%;
+    top: 20vw;
     width: 100%;
-    line-height: 0.4em;
+    line-height: 3em;
 }
 
 .landing h1{
@@ -71,7 +71,7 @@ body{
     width: 50%;
     height: 0%; /*particles had some wierd bug when they have height and misplace*/
     margin: 0;
-    padding: 0;         
+    padding: 0;  
 }
 
 #left {
@@ -118,25 +118,25 @@ body{
 }
 
 .back{
-    width: 24px;
-    height: 24px;
-    border-left: 3px solid rgb(65, 105, 225);
-    border-top: 3px solid rgb(65, 105, 225);
+    width: 1.4vw;
+    height: 1.4vw;
+    border-left: 0.2vw solid rgb(65, 105, 225);
+    border-top: 0.2vw solid rgb(65, 105, 225);
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     box-sizing: border-box;
     float:right;
-    margin-top: 5px;
+    margin-top: 0.5vw;
 }
 
 .circle{
     border-radius: 50%;
     behavior: url(PIE.htc);
     /* remove if you don't care about IE8 */
-    width: 36px;
-    height: 36px;
-    padding: 8px;
-    border: 3px solid rgb(65, 105, 225);
+    width: 2.2vw;
+    height: 2.2vw;
+    padding: 0.4vw;
+    border: 0.2vw solid rgb(65, 105, 225);
     float:right;
     margin: 20px;
 }
@@ -195,6 +195,7 @@ body{
 .method-content h1{
     text-align: center;
     margin-top: 5px;
+    font-size: 5vw;
 }
 
 #par1 {
@@ -242,9 +243,29 @@ body{
 
 .game-result-text {
     margin: 10% 0 20% 0 !important;
-    font-size: 1.9em;
+    font-size: 4vw;
 }
 
 .game-result-text span {
-    font-size: 2.8em;
+    font-size: 6vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .circle {
+        width: 4vw;
+        height: 4vw;
+        border: 0.4vw solid rgb(65, 105, 225);
+    }
+
+    .back{
+        width: 2vw;
+        height: 2vw;
+        border-left: 0.4vw solid rgb(65, 105, 225);
+        border-top: 0.4vw solid rgb(65, 105, 225);
+        margin-top: 0.8vw;
+    }
+
+    #left h1, #right h1{
+        font-size: 30px;
+    }
 }
